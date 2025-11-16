@@ -1,4 +1,4 @@
-from models.cleaning_2 import (
+from models.cleaning import (
     load_raw_application,
     transform_application,
     save_transformed,
@@ -50,6 +50,30 @@ def interactive_menu():
         answer = input("\nDo you want to generate a report from the DB? (y/n): ").strip().lower()
         if answer not in ("y", "yes"):
             print("Exiting interactive menu.")
+
+            # Ask if the user wants to launch the dashboard
+            open_dash = input("\nDo you want to open the dashboard? (y/n): ").strip().lower()
+
+            if open_dash in ("y", "yes"):
+                # Import here to keep changes minimal and localized
+                import subprocess
+                import sys
+                from pathlib import Path
+
+                project_root = Path(__file__).resolve().parent
+                dashboard_path = project_root / "dashboard.py"
+
+                print("\nLaunching Streamlit dashboard...")
+                print("If the browser does not open automatically, go to http://localhost:8501")
+
+                subprocess.run(
+                    [sys.executable, "-m", "streamlit", "run", str(dashboard_path)],
+                    cwd=project_root,
+                )
+            else:
+                print("\nYou can open the dashboard later by running:")
+                print("  streamlit run dashboard.py")
+
             break
 
         print(

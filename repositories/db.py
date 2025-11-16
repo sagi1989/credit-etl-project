@@ -72,7 +72,6 @@ def get_default_rate_by_age_band(
 ) -> pd.DataFrame:
     conn = sqlite3.connect(db_path)
     try:
-        # נביא רק את העמודות AGE ו-TARGET
         query = f"""
         SELECT AGE, TARGET
         FROM {table_name}
@@ -82,7 +81,6 @@ def get_default_rate_by_age_band(
     finally:
         conn.close()
 
-    # הגדרת טווחי גיל
     bins = [18, 25, 35, 45, 55, 65, 120]
     labels = [
         "18-24",
@@ -104,12 +102,13 @@ def get_default_rate_by_age_band(
 
     return grouped
 
+
 def get_default_rate_by_family_status(
     db_path: Path = DB_PATH,
     table_name: str = TABLE_NAME,
 ) -> pd.DataFrame:
     """
-    שיעור דיפולט לפי מצב משפחתי (NAME_FAMILY_STATUS).
+     (NAME_FAMILY_STATUS).
     """
     conn = sqlite3.connect(db_path)
     try:
@@ -134,7 +133,7 @@ def get_default_rate_by_housing_type(
     table_name: str = TABLE_NAME,
 ) -> pd.DataFrame:
     """
-    שיעור דיפולט לפי סוג מגורים (NAME_HOUSING_TYPE).
+     (NAME_HOUSING_TYPE).
     """
     conn = sqlite3.connect(db_path)
     try:
