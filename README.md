@@ -99,4 +99,8 @@ Make sure the filename is exactly application_data.csv (or update load_raw_appli
 
 Once the file is in place, you can run:
 
+<<<<<<< HEAD
 python main.py
+=======
+python main.py
+>>>>>>> 63ed515 (Cleanup: remove .venv from repo and update ignore/README)
