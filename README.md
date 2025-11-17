@@ -75,8 +75,8 @@ The project should not be executed from inside subfolders (e.g., models/, servic
 
 ## Understand the Dataset
 https://www.kaggle.com/datasets/gauravduttakiit/loan-defaulter
-application csv file:
 
+application csv file:
 Number of Instances: 307,511
 Number of Attributes: 12 numeric/categorical variables
 The explained variable is "Target" column
