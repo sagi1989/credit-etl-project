@@ -58,7 +58,7 @@ ETL_Project/
 │
 └── utils/
     └── report.py           # ETL summary report generator
-
+```
 ## Running the Project
 
 To ensure correct file paths (especially for reading the raw CSV and writing the SQLite
@@ -89,11 +89,9 @@ How to prepare the dataset locally
 Because the full CSV file is relatively large, it is not stored directly in the GitHub repository.
 Before running the project, please:
 
-Download the Kaggle dataset (application_data.csv) from the link above.
+# Download the Kaggle dataset (application_data.csv) from the link above.
 
-Create the folder data/raw/ inside the project if it does not exist.
-
-###Place the file as:
+### Place the file as:
 
 ETL_Project/data/raw/application_data.csv
 
