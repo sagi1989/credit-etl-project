@@ -72,3 +72,14 @@ This guarantees that relative paths such as `data/raw/application_data.csv` and
 `data/out/applications.db` resolve correctly.
 
 The project should not be executed from inside subfolders (e.g., models/, service/, etc.).
+
+## Understand the Dataset
+https://www.kaggle.com/datasets/gauravduttakiit/loan-defaulter
+application csv file:
+
+Number of Instances: 307,511
+Number of Attributes: 12 numeric/categorical variables
+The explained variable is "Target" column
+The dataset, sourced from the Kaggle library here and it originates from Homecredit's banking services, operational across multiple countries, including China, India, Indonesia, Vietnam, Philippines, Russia, Kazakhstan, USA, Czech Republic, and Slovakia.
+Creator: Gaurav Dutta
+Updated: 3 years ago
