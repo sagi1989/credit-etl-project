@@ -99,8 +99,20 @@ Make sure the filename is exactly application_data.csv (or update load_raw_appli
 
 Once the file is in place, you can run:
 
-<<<<<<< HEAD
+Creating a Virtual Environment (recommended)
+
+To run the project in a clean and isolated Python environment, you may create a virtual environment before installing the dependencies:
+
+On Windows:
+
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
 python main.py
-=======
+
+On macOS / Linux:
+
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 python main.py
->>>>>>> 63ed515 (Cleanup: remove .venv from repo and update ignore/README)
