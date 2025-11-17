@@ -83,3 +83,25 @@ The explained variable is "Target" column
 The dataset, sourced from the Kaggle library here and it originates from Homecredit's banking services, operational across multiple countries, including China, India, Indonesia, Vietnam, Philippines, Russia, Kazakhstan, USA, Czech Republic, and Slovakia.
 Creator: Gaurav Dutta
 Updated: 3 years ago
+How to prepare the dataset locally
+
+Because the full CSV file is relatively large, it is not stored directly in the GitHub repository.
+Before running the project, please:
+
+Download the Kaggle dataset (application_data.csv) from the link above.
+
+Create the folder data/raw/ inside the project if it does not exist.
+
+Place the file as:
+
+ETL_Project/
+└── data/
+    └── raw/
+        └── application_data.csv
+
+
+Make sure the filename is exactly application_data.csv (or update load_raw_application() accordingly).
+
+Once the file is in place, you can run:
+
+python main.py
